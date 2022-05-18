@@ -1,0 +1,65 @@
+
+
+	
+	 
+      <h1>Computer Science department survay form</h1>
+      <form (ngSubmit)="onSubmit()">
+         <label for="fname"> first name<span class="asterisk">*</span> </label>
+         <input type="text" id="fname" required autofocus [(ngModel)]="rating.fname" name="fname"/><br><br>
+
+		 <label for="lname">last name <span class="asterisk">*</span></label>
+         <input type="text" id="lname" required autofocus [(ngModel)]="rating.lname" name="lname"/><br><br>
+
+         <label for="address">street adress <span class="asterisk">*</span></label>
+         <input type="text" id="address" name="address" placeholder="street,apt,area" required [(ngModel)]="rating.address"/><br><br>
+
+         <label for="city">city <span class="asterisk">*</span></label>
+         <input type="text" id="city" name="city"  required [(ngModel)]="rating.city" /><br><br>
+
+         <label for="state">state <span class="asterisk">*</span></label>
+         <input type="text" id="state" name="state" required [(ngModel)]="rating.state"/><br><br>
+
+         <label for="zip">zip <span class="asterisk">*</span></label>
+         <input type="text" id="zip" name="zip" required placeholder="your 5 digit zip" [(ngModel)]="rating.zip"/><br><br>
+
+         <label for="phone">Enter a phone number:<span class="asterisk">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required [(ngModel)]="rating.phone" ><br><br>
+
+        <label for="email">email:<span class="asterisk">*</span></label>
+        <input type="email" id="email" name="email" placeholder="username@mail.com" required [(ngModel)]="rating.email"/><br><br>
+
+        <label for="date1">Date: <span class="asterisk">*</span></label>
+        <input type="date" id="date1" name="date1" required [(ngModel)]="rating.date"/><br><br>
+
+        <p>what did you like about the campus <span class="asterisk">*</span></p>
+         <input type="checkbox" name="campus" [(ngModel)]="rating.like_student" [ngModelOptions]="{standalone: true}"/>students<br>
+         <input type="checkbox" name="campus"  [(ngModel)]="rating.like_location" [ngModelOptions]="{standalone: true}"/>location<br>
+         <input type="checkbox" name="campus"  [(ngModel)]="rating.like_campus" [ngModelOptions]="{standalone: true}"/>campus<br>
+         <input type="checkbox" name="campus"  [(ngModel)]="rating.like_atmosphere" [ngModelOptions]="{standalone: true}"/>atmosphere<br>
+         <input type="checkbox" name="campus"  [(ngModel)]="rating.like_dormrooms" [ngModelOptions]="{standalone: true}"/>dorm rooms<br>
+         <input type="checkbox" name="campus"  [(ngModel)]="rating.like_sports" [ngModelOptions]="{standalone: true}"/>sports<br><br>
+
+         <p>how did you get intrested  about university:</p>
+         <input type="radio" name="know" [(ngModel)]="rating.intrested" value="television" >television<br>
+         <input type="radio" name="know" [(ngModel)]="rating.intrested" value="friends" > friends<br>
+         <input type="radio" name="know" [(ngModel)]="rating.intrested" value="internet">Internet<br>
+         <input type="radio" name="know"  [(ngModel)]="rating.intrested" value="other">other<br>
+         
+		 <br><br>
+
+         <label for="recomend">how likely would recommend this college:<span class="asterisk">*</span></label>
+		 <input type="text" id="recomend" name="recomend" list ="m" required [(ngModel)]="rating.recommend"/><br><br>
+         <datalist id="m">
+            <option value="Very Likely">
+            <option value="Likely">
+            <option value="Unlikely">
+         </datalist>
+         <textarea  name="comments"rows="4" cols="50" placeholder="enter your comments" [(ngModel)]="rating.comments"></textarea><br><br>
+         <input type="submit" name="submit" class="sub1"/><br><br>
+         <input type="reset" value="reset" class="sub1"/><br><br>
+      </form>
+	  
+	  <p> <span class="asterisk">*</span> Indicates required fields.<p>
+	  
+
+	

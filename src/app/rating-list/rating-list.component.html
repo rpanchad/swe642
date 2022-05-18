@@ -1,0 +1,34 @@
+<h2>Rating List</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+        <th>first name</th>
+        <th>last name</th>
+        <th>address</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>recomend</th>
+        <th>likes about college </th>
+        <th>know about college by</th>
+        <th>Date</th>
+
+    </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let rating of ratings">
+                <td>{{rating.fname}}</td>
+                <td> {{rating.lname}}</td>
+                <td>{{rating.address}}</td>
+                <td>{{rating.phone}}</td>
+                <td> {{rating.email}}</td>
+                <td> {{rating.recommend}}</td>
+                <td> {{getLikes(rating)}}</td>
+                <td> {{rating.intrested}}</td>
+                <td>{{rating.date}}</td>
+                
+            </tr>
+        </tbody>
+
+    </table>
+
+
